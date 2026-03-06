@@ -1,0 +1,888 @@
+/* =============================================================================
+   NEQUI COMPONENT STYLES - Clases CSS reutilizables
+   Extraidas y adaptadas del APK Android para uso en PWA
+   ============================================================================= */
+
+/* ===========================================================================
+   BUTTONS - Estilos de botones del APK
+   =========================================================================== */
+
+/* Boton principal pink (bg_button_pink.xml) */
+.nq-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  transition: opacity var(--nq-transition-normal), transform var(--nq-transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nq-btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.nq-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Primary - #da0081, radius 14px (LoginPage style) */
+.nq-btn-primary {
+  background-color: var(--nq-color-primary);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-6);
+  font-size: var(--nq-text-lg);
+  min-height: var(--nq-button-height);
+}
+
+/* Primary small radius (bg_button_pink.xml - 4dp radius) */
+.nq-btn-primary-sharp {
+  background-color: var(--nq-color-primary);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-sm);
+  padding: var(--nq-space-3) var(--nq-space-5);
+  font-size: var(--nq-text-md);
+}
+
+/* Rounded pill button (rounded_button_pink - 30dp radius) */
+.nq-btn-pill {
+  background-color: var(--nq-color-primary-hot);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-3xl);
+  padding: var(--nq-space-3) var(--nq-space-8);
+  font-size: var(--nq-text-lg);
+}
+
+/* Dark purple button (bg_round_btn - #200020) */
+.nq-btn-dark {
+  background-color: var(--nq-color-bg-dark);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-sm);
+  padding: var(--nq-space-3) var(--nq-space-5);
+  font-size: var(--nq-text-md);
+}
+
+/* Purple secondary (button material dark - #4d334e) */
+.nq-btn-secondary {
+  background-color: var(--nq-color-bg-purple-light);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-6);
+  font-size: var(--nq-text-lg);
+}
+
+/* Outline / Ghost button */
+.nq-btn-outline {
+  background: transparent;
+  color: var(--nq-color-white);
+  border: 1px solid var(--nq-color-gray-25);
+  border-radius: var(--nq-radius-md);
+  padding: var(--nq-space-2) var(--nq-space-4);
+  font-size: var(--nq-text-md);
+  font-weight: 500;
+}
+
+/* Positive action (button_positive) */
+.nq-btn-success {
+  background-color: var(--nq-color-success);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-6);
+  font-size: var(--nq-text-lg);
+}
+
+/* Negative action (button_negative) */
+.nq-btn-danger {
+  background-color: var(--nq-color-error);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-6);
+  font-size: var(--nq-text-lg);
+}
+
+/* Blue rounded (button_rounded_blue - 24dp radius) */
+.nq-btn-blue {
+  background-color: #2196f3;
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-2xl);
+  padding: var(--nq-space-3) var(--nq-space-6);
+  font-size: var(--nq-text-lg);
+}
+
+/* Icon button (square, like money-btn) */
+.nq-btn-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--nq-color-primary);
+  color: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  font-size: var(--nq-text-3xl);
+  padding: 0;
+}
+
+/* Full width */
+.nq-btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* ===========================================================================
+   CARDS - CardView del APK
+   =========================================================================== */
+
+.nq-card {
+  background: var(--nq-color-white);
+  border-radius: var(--nq-radius-md);
+  box-shadow: var(--nq-shadow-card);
+  overflow: hidden;
+}
+
+.nq-card-elevated {
+  background: var(--nq-color-white);
+  border-radius: var(--nq-radius-lg);
+  box-shadow: var(--nq-shadow-lg);
+  overflow: hidden;
+}
+
+.nq-card-body {
+  padding: var(--nq-space-4);
+}
+
+.nq-card-dark {
+  background: var(--nq-color-gray-850);
+  border-radius: var(--nq-radius-md);
+  box-shadow: var(--nq-shadow-card);
+  color: var(--nq-color-white);
+  overflow: hidden;
+}
+
+/* ===========================================================================
+   CHIPS - Material Chips (fragment_nequi_point_detail)
+   =========================================================================== */
+
+.nq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nq-space-1);
+  padding: var(--nq-space-1) var(--nq-space-3);
+  border-radius: var(--nq-radius-full);
+  font-size: var(--nq-text-sm);
+  font-weight: 500;
+}
+
+.nq-chip-success {
+  background-color: rgba(0, 185, 46, 0.12);
+  color: var(--nq-color-success);
+}
+
+.nq-chip-error {
+  background-color: rgba(176, 0, 32, 0.12);
+  color: var(--nq-color-error);
+}
+
+.nq-chip-primary {
+  background-color: rgba(218, 0, 129, 0.12);
+  color: var(--nq-color-primary);
+}
+
+.nq-chip-neutral {
+  background-color: var(--nq-color-gray-100);
+  color: var(--nq-color-gray-500);
+}
+
+/* ===========================================================================
+   INPUTS - Phone input style del LoginPage
+   =========================================================================== */
+
+.nq-input-group {
+  display: flex;
+  align-items: center;
+  background-color: var(--nq-overlay-white-8);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-4);
+}
+
+.nq-input-group-light {
+  background-color: var(--nq-color-gray-25);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-4) var(--nq-space-4);
+  display: flex;
+  align-items: center;
+}
+
+.nq-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: var(--nq-text-lg);
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+}
+
+.nq-input::placeholder {
+  color: var(--nq-overlay-black-30);
+}
+
+.nq-input-prefix {
+  font-size: var(--nq-text-lg);
+  font-weight: 600;
+  color: var(--nq-overlay-white-50);
+  margin-right: var(--nq-space-3);
+}
+
+.nq-input-divider {
+  width: 1.5px;
+  height: 1.5rem;
+  background-color: var(--nq-overlay-white-10);
+  margin: 0 var(--nq-space-3);
+}
+
+/* Search input (activity_filter_nequi_point) */
+.nq-search-input {
+  display: flex;
+  align-items: center;
+  gap: var(--nq-space-2);
+  background-color: var(--nq-color-gray-25);
+  border-radius: var(--nq-radius-xl);
+  padding: var(--nq-space-3) var(--nq-space-4);
+}
+
+.nq-search-input .nq-input {
+  color: var(--nq-color-gray-800);
+}
+
+/* ===========================================================================
+   TOOLBAR / HEADER - Toolbar del APK
+   =========================================================================== */
+
+.nq-toolbar {
+  display: flex;
+  align-items: center;
+  height: var(--nq-toolbar-height);
+  padding: 0 var(--nq-space-4);
+  background-color: var(--nq-color-bg-dark);
+  color: var(--nq-color-white);
+}
+
+.nq-toolbar-light {
+  background-color: var(--nq-color-white);
+  color: var(--nq-color-bg-dark);
+}
+
+.nq-toolbar-title {
+  flex: 1;
+  font-size: var(--nq-text-2xl);
+  font-weight: 700;
+  margin-left: var(--nq-space-4);
+}
+
+.nq-toolbar-nav {
+  width: var(--nq-icon-md);
+  height: var(--nq-icon-md);
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================================================================
+   BADGES - Dynamic key badge del LoginPage
+   =========================================================================== */
+
+.nq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nq-space-2);
+  background-color: var(--nq-overlay-white-8);
+  border-radius: var(--nq-radius-lg);
+  padding: var(--nq-space-2) var(--nq-space-3);
+}
+
+.nq-badge-light {
+  background-color: var(--nq-color-gray-25);
+}
+
+/* ===========================================================================
+   TOAST / SNACKBAR
+   =========================================================================== */
+
+.nq-toast {
+  position: fixed;
+  bottom: var(--nq-space-20);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--nq-color-gray-800);
+  color: var(--nq-color-white);
+  padding: var(--nq-space-3) var(--nq-space-6);
+  border-radius: var(--nq-radius-md);
+  font-size: var(--nq-text-md);
+  box-shadow: var(--nq-shadow-lg);
+  z-index: 9999;
+  animation: nq-toast-in var(--nq-transition-slide);
+}
+
+@keyframes nq-toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(1rem); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ===========================================================================
+   DIALOG / OVERLAY - dialog_overlay del APK
+   =========================================================================== */
+
+.nq-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--nq-overlay-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+}
+
+.nq-overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nq-space-4);
+  color: var(--nq-color-white);
+}
+
+/* ===========================================================================
+   LIST ITEMS - item_nequi_point_detail style
+   =========================================================================== */
+
+.nq-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--nq-space-3);
+  padding: var(--nq-space-3) var(--nq-space-4);
+  background: var(--nq-color-white);
+  border-bottom: 1px solid var(--nq-color-gray-100);
+}
+
+.nq-list-item-icon {
+  width: var(--nq-icon-xl);
+  height: var(--nq-icon-xl);
+  border-radius: var(--nq-radius-full);
+  background: var(--nq-color-surface-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nq-list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.nq-list-item-title {
+  font-size: var(--nq-text-lg);
+  font-weight: 600;
+  color: var(--nq-color-gray-800);
+}
+
+.nq-list-item-subtitle {
+  font-size: var(--nq-text-base);
+  color: var(--nq-color-gray-400);
+  margin-top: var(--nq-space-0-5);
+}
+
+/* ===========================================================================
+   MAP MARKER INFO WINDOW - marker_info_window_map
+   =========================================================================== */
+
+.nq-marker-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nq-space-1);
+  padding: var(--nq-space-2) var(--nq-space-3);
+  background: var(--nq-color-white);
+  border-radius: var(--nq-radius-md);
+  box-shadow: var(--nq-shadow-md);
+  max-width: 200px;
+  text-align: center;
+}
+
+.nq-marker-info-title {
+  font-size: var(--nq-text-md);
+  font-weight: 700;
+  color: var(--nq-color-gray-800);
+}
+
+.nq-marker-info-subtitle {
+  font-size: var(--nq-text-sm);
+  color: var(--nq-color-gray-400);
+}
+
+/* ===========================================================================
+   CHAT / ZUI - Componentes de chat del APK
+   =========================================================================== */
+
+.nq-chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nq-space-2);
+  padding: var(--nq-space-4);
+}
+
+/* Agent message (zui_background_agent_cell) */
+.nq-chat-bubble-agent {
+  max-width: 80%;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  background-color: var(--nq-color-gray-25);
+  border-radius: var(--nq-radius-xl) var(--nq-radius-xl) var(--nq-radius-xl) var(--nq-radius-sm);
+  color: var(--nq-color-gray-800);
+  font-size: var(--nq-text-md);
+  align-self: flex-start;
+}
+
+/* User message (zui_background_end_user_cell) */
+.nq-chat-bubble-user {
+  max-width: 80%;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  background-color: var(--nq-color-primary);
+  border-radius: var(--nq-radius-xl) var(--nq-radius-xl) var(--nq-radius-sm) var(--nq-radius-xl);
+  color: var(--nq-color-white);
+  font-size: var(--nq-text-md);
+  align-self: flex-end;
+}
+
+/* Error message */
+.nq-chat-bubble-error {
+  max-width: 80%;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  background-color: rgba(176, 0, 32, 0.08);
+  border: 1px solid var(--nq-color-error);
+  border-radius: var(--nq-radius-xl);
+  color: var(--nq-color-error);
+  font-size: var(--nq-text-md);
+  align-self: flex-start;
+}
+
+/* Typing indicator (zui_avd_typing_indicator) */
+.nq-typing-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  background-color: var(--nq-color-gray-25);
+  border-radius: var(--nq-radius-xl);
+}
+
+.nq-typing-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nq-color-gray-300);
+  border-radius: 50%;
+  animation: nq-typing-bounce 1.4s infinite ease-in-out;
+}
+
+.nq-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.nq-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes nq-typing-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Chat composer (zui_composer) */
+.nq-chat-composer {
+  display: flex;
+  align-items: center;
+  gap: var(--nq-space-2);
+  padding: var(--nq-space-2) var(--nq-space-3);
+  background: var(--nq-color-white);
+  border-top: 1px solid var(--nq-color-gray-100);
+}
+
+.nq-chat-composer-input {
+  flex: 1;
+  border: 1px solid var(--nq-color-gray-200);
+  border-radius: var(--nq-radius-2xl);
+  padding: var(--nq-space-2) var(--nq-space-4);
+  font-size: var(--nq-text-md);
+  font-family: 'Manrope', sans-serif;
+  outline: none;
+  resize: none;
+}
+
+.nq-chat-composer-input:focus {
+  border-color: var(--nq-color-primary);
+}
+
+.nq-chat-send-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--nq-color-primary);
+  color: var(--nq-color-white);
+  border: none;
+  border-radius: var(--nq-radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bot avatar (zui_avatar_bot_default) */
+.nq-bot-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--nq-radius-full);
+  background: var(--nq-color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===========================================================================
+   IN-APP MESSAGING - CleverTap components
+   =========================================================================== */
+
+/* Cover / Full screen modal (inapp_cover) */
+.nq-inapp-cover {
+  position: fixed;
+  inset: 0;
+  background: var(--nq-color-white);
+  z-index: 9500;
+  display: flex;
+  flex-direction: column;
+}
+
+.nq-inapp-cover-image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.nq-inapp-cover-content {
+  flex: 1;
+  padding: var(--nq-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--nq-space-4);
+}
+
+.nq-inapp-close {
+  position: absolute;
+  top: var(--nq-space-4);
+  right: var(--nq-space-4);
+  width: 2rem;
+  height: 2rem;
+  background: var(--nq-overlay-black-50);
+  color: var(--nq-color-white);
+  border: none;
+  border-radius: var(--nq-radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Half interstitial (inapp_half_interstitial) */
+.nq-inapp-half {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 60vh;
+  background: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl) var(--nq-radius-xl) 0 0;
+  box-shadow: var(--nq-shadow-xl);
+  z-index: 9500;
+  padding: var(--nq-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--nq-space-4);
+  animation: nq-slide-up var(--nq-transition-slide);
+}
+
+@keyframes nq-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Interstitial (inapp_interstitial) */
+.nq-inapp-interstitial {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--nq-overlay-black-50);
+  z-index: 9500;
+  padding: var(--nq-space-6);
+}
+
+.nq-inapp-interstitial-card {
+  background: var(--nq-color-white);
+  border-radius: var(--nq-radius-xl);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header banner (inapp_header) */
+.nq-inapp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--nq-color-white);
+  box-shadow: var(--nq-shadow-md);
+  z-index: 9500;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--nq-space-3);
+  animation: nq-slide-down var(--nq-transition-slide);
+}
+
+@keyframes nq-slide-down {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Footer banner (inapp_footer) */
+.nq-inapp-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--nq-color-white);
+  box-shadow: 0 -2px 8px var(--nq-overlay-black-12);
+  z-index: 9500;
+  padding: var(--nq-space-3) var(--nq-space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--nq-space-3);
+  animation: nq-slide-up var(--nq-transition-slide);
+}
+
+/* ===========================================================================
+   INBOX / MESSAGE LIST
+   =========================================================================== */
+
+.nq-inbox-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--nq-color-gray-100);
+}
+
+.nq-inbox-tab {
+  flex: 1;
+  padding: var(--nq-space-3);
+  text-align: center;
+  font-size: var(--nq-text-md);
+  font-weight: 600;
+  color: var(--nq-color-gray-400);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+}
+
+.nq-inbox-tab-active {
+  color: var(--nq-color-primary);
+  border-bottom-color: var(--nq-color-primary);
+}
+
+.nq-inbox-message {
+  display: flex;
+  gap: var(--nq-space-3);
+  padding: var(--nq-space-4);
+  border-bottom: 1px solid var(--nq-color-gray-100);
+}
+
+.nq-inbox-message-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--nq-radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.nq-inbox-message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.nq-inbox-message-title {
+  font-size: var(--nq-text-md);
+  font-weight: 700;
+  color: var(--nq-color-gray-800);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nq-inbox-message-body {
+  font-size: var(--nq-text-base);
+  color: var(--nq-color-gray-450);
+  margin-top: var(--nq-space-0-5);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nq-inbox-message-time {
+  font-size: var(--nq-text-xs);
+  color: var(--nq-color-gray-300);
+  margin-top: var(--nq-space-1);
+}
+
+/* ===========================================================================
+   SCANNER - QR/Barcode overlay
+   =========================================================================== */
+
+.nq-scanner-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--nq-color-black);
+}
+
+.nq-scanner-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 2px solid var(--nq-color-primary);
+  border-radius: var(--nq-radius-lg);
+}
+
+.nq-scanner-controls {
+  position: absolute;
+  bottom: var(--nq-space-12);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--nq-space-10);
+}
+
+.nq-scanner-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nq-space-1);
+  background: none;
+  border: none;
+  color: var(--nq-color-white);
+  cursor: pointer;
+  font-size: var(--nq-text-sm);
+  font-family: 'Manrope', sans-serif;
+}
+
+/* ===========================================================================
+   SPLASH SCREEN
+   =========================================================================== */
+
+.nq-splash {
+  position: fixed;
+  inset: 0;
+  background: var(--nq-color-bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.nq-splash-logo {
+  width: 200px;
+  height: auto;
+  animation: nq-splash-fade 1s ease-in;
+}
+
+@keyframes nq-splash-fade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===========================================================================
+   RADIO GROUP / FILTERS (activity_nequi_point_map)
+   =========================================================================== */
+
+.nq-filter-group {
+  display: flex;
+  gap: var(--nq-space-2);
+  overflow-x: auto;
+  padding: var(--nq-space-2) var(--nq-space-4);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nq-filter-group::-webkit-scrollbar {
+  display: none;
+}
+
+.nq-filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nq-space-1);
+  padding: var(--nq-space-2) var(--nq-space-4);
+  border-radius: var(--nq-radius-full);
+  border: 1px solid var(--nq-color-gray-200);
+  background: var(--nq-color-white);
+  font-size: var(--nq-text-base);
+  font-weight: 500;
+  color: var(--nq-color-gray-500);
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  transition: all var(--nq-transition-fast);
+}
+
+.nq-filter-option-active {
+  background: var(--nq-color-primary);
+  border-color: var(--nq-color-primary);
+  color: var(--nq-color-white);
+}
+
+/* ===========================================================================
+   UTILITIES
+   =========================================================================== */
+
+.nq-text-center { text-align: center; }
+.nq-text-left { text-align: left; }
+.nq-text-right { text-align: right; }
+.nq-flex { display: flex; }
+.nq-flex-col { flex-direction: column; }
+.nq-flex-center { align-items: center; justify-content: center; }
+.nq-flex-between { justify-content: space-between; }
+.nq-flex-1 { flex: 1; }
+.nq-gap-1 { gap: var(--nq-space-1); }
+.nq-gap-2 { gap: var(--nq-space-2); }
+.nq-gap-3 { gap: var(--nq-space-3); }
+.nq-gap-4 { gap: var(--nq-space-4); }
+.nq-p-4 { padding: var(--nq-space-4); }
+.nq-px-4 { padding-left: var(--nq-space-4); padding-right: var(--nq-space-4); }
+.nq-py-3 { padding-top: var(--nq-space-3); padding-bottom: var(--nq-space-3); }
+.nq-mb-2 { margin-bottom: var(--nq-space-2); }
+.nq-mb-4 { margin-bottom: var(--nq-space-4); }
+.nq-mt-4 { margin-top: var(--nq-space-4); }
+.nq-w-full { width: 100%; }
+.nq-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
