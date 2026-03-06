@@ -5,6 +5,7 @@ import byBancolombia from '../assets/icons/by-bancolombia.svg';
 import otpIcon from '../assets/icons/new_otp_icon.svg';
 import phoneIcon from '../assets/icons/phone-portrait-blue.svg';
 import copyIcon from '../assets/icons/copy-icon.svg';
+import questionIcon from '../assets/icons/question-icon.svg';
 import designGuide from '../../designs/inicioLogin.png';
 import './LoginPage.css';
 
@@ -78,7 +79,7 @@ const LoginPage: React.FC = () => {
               <img src={copyIcon} alt="Copiar" className="copy-icon" />
             </div>
             <button className="help-btn">
-              <span className="help-icon-circle">?</span>
+              <img src={questionIcon} alt="?" className="help-icon-circle" />
               <span>Ayuda</span>
             </button>
           </div>

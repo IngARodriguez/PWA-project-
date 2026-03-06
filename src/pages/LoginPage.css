@@ -113,11 +113,11 @@
   align-items: center;
   gap: 6px;
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1.2px solid #ffffff;
   border-radius: 3px;
-  padding: 11px 13px;
+  padding: 10px 13px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 200;
   font-family: 'Manrope', sans-serif;
   letter-spacing: 0.3px;
@@ -125,17 +125,8 @@
 }
 
 .help-icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #ffffff;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1;
-  color: #f4f5f8;
+  width: 19px;
+  height: 19px;
 }
 
 /* ===== Logo Area ===== */
@@ -149,7 +140,6 @@
 .main-logo {
   width: 200px;
   height: auto;
-  filter: brightness(0) invert(1);
 }
 
 /* ===== Bottom Section ===== */
@@ -161,24 +151,27 @@
 .phone-input-container {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 16px 18px;
-  margin-bottom: 14px;
+  background-color: #4d334d;
+  border-radius: 3px;
+  padding: 12px 10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-bottom: 10px;
 }
 
 .phone-prefix {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 450;
+  color: #f1bfda;
   min-width: 36px;
 }
 
 .phone-divider {
-  width: 1.5px;
-  height: 24px;
-  background-color: rgba(255, 255, 255, 0.15);
-  margin: 0 14px;
+  width: 1.8px;
+  height: 16px;
+  background-color: #200020;
+  margin-left: -5px;
+  margin-right: 10px;
 }
 
 .phone-input {
@@ -187,8 +180,8 @@
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 450;
   font-family: 'Manrope', sans-serif;
   letter-spacing: 1px;
 }
@@ -200,8 +193,10 @@
 /* Action Buttons */
 .login-actions {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   margin-bottom: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .enter-btn {
@@ -209,10 +204,10 @@
   background-color: #da0081;
   color: #ffffff;
   border: none;
-  border-radius: 14px;
-  padding: 16px;
-  font-size: 17px;
-  font-weight: 700;
+  border-radius: 3px;
+  padding: 5px 16px;
+  font-size: 15px;
+  font-weight: 450;
   font-family: 'Manrope', sans-serif;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -223,14 +218,14 @@
 }
 
 .money-btn {
-  width: 56px;
-  height: 56px;
+  width: 43px;
+  height: 43px;
   background-color: #da0081;
   color: #ffffff;
   border: none;
-  border-radius: 14px;
-  font-size: 22px;
-  font-weight: 700;
+  border-radius: 3px;
+  font-size: 25px;
+  font-weight: 500;
   font-family: 'Manrope', sans-serif;
   cursor: pointer;
   display: flex;
