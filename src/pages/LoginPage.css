@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
   background-color: #200020;
   color: #ffffff;
   padding: 0 24px;
   padding-top: env(safe-area-inset-top, 16px);
   padding-bottom: env(safe-area-inset-bottom, 16px);
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* ===== Design Guide Overlay ===== */
@@ -58,10 +62,10 @@
   gap: 10px;
   background-color: #4d334d;
   border-radius: 3px;
-  padding-top: 1.5px;
-  padding-bottom: 3.5px;
-  padding-left: 9px;
-  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 11px;
   margin-left: -8px;
 }
 
@@ -86,13 +90,13 @@
 }
 
 .key-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   color: rgb(255, 255, 255);
 }
 
 .key-number {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -111,9 +115,9 @@
   background: transparent;
   border: 1px solid #ffffff;
   border-radius: 3px;
-  padding: 8.5px 10px;
+  padding: 11px 13px;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 200;
   font-family: 'Manrope', sans-serif;
   letter-spacing: 0.3px;
@@ -124,11 +128,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   border: 1px solid #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1;
   color: #f4f5f8;
