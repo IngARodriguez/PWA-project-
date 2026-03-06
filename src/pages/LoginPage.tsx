@@ -1,15 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IonPage, IonContent } from '@ionic/react';
 import nequiLogo from '../assets/icons/nequi-logo.svg';
 import byBancolombia from '../assets/icons/by-bancolombia.svg';
 import otpIcon from '../assets/icons/new_otp_icon.svg';
 import phoneIcon from '../assets/icons/phone-portrait-blue.svg';
+import copyIcon from '../assets/icons/copy-icon.svg';
 import designGuide from '../../designs/inicioLogin.png';
 import './LoginPage.css';
 
 const LoginPage: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [showGuide, setShowGuide] = useState(true);
+
+  const randomOtp = () => {
+    const n = Math.floor(100000 + Math.random() * 900000).toString();
+    return `${n.slice(0, 3)} ${n.slice(3)}`;
+  };
+  const [otpCode, setOtpCode] = useState(randomOtp);
+
+  useEffect(() => {
+    const interval = setInterval(() => setOtpCode(randomOtp()), 44000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/[^0-9]/g, '');
@@ -46,15 +58,24 @@ const LoginPage: React.FC = () => {
           {/* Top Bar */}
           <div className="login-top-bar">
             <div className="dynamic-key-badge">
-              <img src={otpIcon} alt="OTP" className="otp-icon" />
-              <div className="key-text">
-                <span className="key-label">Clave dinamica</span>
-                <span className="key-number">916 618</span>
-              </div>
-              <svg className="copy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+              <svg className="otp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="13" stroke="#fbe5f2" strokeWidth="4"/>
+                <circle
+                  cx="16" cy="16" r="13"
+                  stroke="#da0081"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeDasharray="81.68"
+                  strokeDashoffset="81.68"
+                  className="otp-progress"
+                  transform="rotate(-90 16 16)"
+                />
               </svg>
+              <div className="key-text">
+                <span className="key-label">Clave dinámica</span>
+                <span className="key-number">{otpCode}</span>
+              </div>
+              <img src={copyIcon} alt="Copiar" className="copy-icon" />
             </div>
             <button className="help-btn">
               <span className="help-icon-circle">?</span>

@@ -56,14 +56,27 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 8px 14px;
+  background-color: #4d334d;
+  border-radius: 3px;
+  padding-top: 1.5px;
+  padding-bottom: 3.5px;
+  padding-left: 9px;
+  padding-right: 7px;
+  margin-left: -8px;
 }
 
 .otp-icon {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
+}
+
+.otp-progress {
+  animation: otp-fill 44s linear infinite;
+}
+
+@keyframes otp-fill {
+  from { stroke-dashoffset: 81.68; }
+  to   { stroke-dashoffset: 0; }
 }
 
 .key-text {
@@ -75,18 +88,20 @@
 .key-label {
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255);
 }
 
 .key-number {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 .copy-icon {
-  color: rgba(255, 255, 255, 0.5);
-  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+  margin-left: 0px;
+  margin-top: 1px;
 }
 
 .help-btn {
@@ -96,14 +111,13 @@
   background: transparent;
   border: 1px solid #ffffff;
   border-radius: 3px;
-  padding: 8px 10px;
+  padding: 8.5px 10px;
   color: #ffffff;
   font-size: 13px;
   font-weight: 200;
   font-family: 'Manrope', sans-serif;
   letter-spacing: 0.3px;
   margin-right: -10px;
-  margin-top: -20px;
 }
 
 .help-icon-circle {
@@ -115,7 +129,7 @@
   border-radius: 50%;
   border: 1px solid #ffffff;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1;
   color: #f4f5f8;
 }
