@@ -6,12 +6,10 @@ import otpIcon from '../assets/icons/new_otp_icon.svg';
 import phoneIcon from '../assets/icons/phone-portrait-blue.svg';
 import copyIcon from '../assets/icons/copy-icon.svg';
 import questionIcon from '../assets/icons/question-icon.svg';
-import designGuide from '../../designs/inicioLogin.png';
 import './LoginPage.css';
 
 const LoginPage: React.FC = () => {
   const [phone, setPhone] = useState('');
-  const [showGuide, setShowGuide] = useState(true);
 
   const randomOtp = () => {
     const n = Math.floor(100000 + Math.random() * 900000).toString();
@@ -44,18 +42,6 @@ const LoginPage: React.FC = () => {
     <IonPage>
       <IonContent fullscreen scrollY={false}>
         <div className="login-container">
-          {/* Design Guide Overlay */}
-          {showGuide && (
-            <div className="design-guide-overlay">
-              <img src={designGuide} alt="Design guide" />
-            </div>
-          )}
-          <button
-            className="guide-toggle-btn"
-            onClick={() => setShowGuide(prev => !prev)}
-          >
-            {showGuide ? 'Ocultar guía' : 'Mostrar guía'}
-          </button>
           {/* Top Bar */}
           <div className="login-top-bar">
             <div className="dynamic-key-badge">
