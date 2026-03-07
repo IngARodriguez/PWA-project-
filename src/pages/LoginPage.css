@@ -62,16 +62,18 @@
   gap: 10px;
   background-color: #4d334d;
   border-radius: 3px;
-  padding-top: 5px;
-  padding-bottom: 7px;
-  padding-left: 12px;
+  padding-top: 3px;
+  padding-bottom: 5.5px;
+  padding-left: 10px;
   padding-right: 11px;
   margin-left: -8px;
 }
 
 .otp-icon {
-  width: 20px;
-  height: 20px;
+  width: 20.5px;
+  height: 20.5px;
+  margin-top: 1.5px;
+  margin-left: -1.5px;
 }
 
 .otp-progress {
@@ -92,20 +94,24 @@
 .key-label {
   font-size: 12px;
   font-weight: 400;
+  margin-left: -2px;
   color: rgb(255, 255, 255);
 }
 
 .key-number {
   font-size: 15px;
   font-weight: 700;
+  margin-top: 2px;
+  margin-left: -2px;
   letter-spacing: 2px;
 }
 
 .copy-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 0px;
-  margin-top: 1px;
+  width: 27px;
+  height: 27px;
+  margin-left: 2.5px;
+  margin-top: 4px;
+  
 }
 
 .help-btn {
@@ -115,18 +121,22 @@
   background: transparent;
   border: 1.2px solid #ffffff;
   border-radius: 3px;
-  padding: 10px 13px;
+  padding: 9px;
+  padding-left: 14px;
+  padding-right: 10px;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 200;
+  margin-top: -1px;
   font-family: 'Manrope', sans-serif;
   letter-spacing: 0.3px;
-  margin-right: -10px;
+  margin-right: -6px;
 }
 
 .help-icon-circle {
   width: 19px;
   height: 19px;
+  margin-right: 1.5px
 }
 
 /* ===== Logo Area ===== */
